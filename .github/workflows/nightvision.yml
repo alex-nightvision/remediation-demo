@@ -6,7 +6,7 @@ on:
 
 env:
   # nightvision app create -n remediation-demo
-  # nightvision target create -n remediation-demo -u http://127.0.0.1:5000/ --type api
+  # nightvision target create -n remediation-demo -u http://127.0.0.1:5000 --type api
   # nightvision swagger extract ./ -t remediation-demo --lang python 
   NIGHTVISION_TOKEN: ${{ secrets.NIGHTVISION_TOKEN }}
   NIGHTVISION_TARGET: remediation-demo
