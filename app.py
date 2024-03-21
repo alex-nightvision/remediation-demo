@@ -43,6 +43,22 @@ def get_user():
     else:
         return jsonify({"error": "User not found"}), 404
 
+@app.route('/.env', methods=['GET'])
+def get_env():
+    return """
+    DB_NAME=crapi
+    DB_USER=crapi
+    DB_PASSWORD=crapi
+    DB_HOST=postgresdb
+    DB_PORT=5432
+    SERVER_PORT=8080
+    MONGO_DB_HOST=mongodb
+    MONGO_DB_PORT=27017
+    MONGO_DB_USER=crapi
+    MONGO_DB_PASSWORD=crapi
+    MONGO_DB_NAME=crapi
+    """
+
 if __name__ == '__main__':
     init_db()  # Initialize the database and populate it
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
