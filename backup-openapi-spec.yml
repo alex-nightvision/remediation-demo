@@ -4,6 +4,15 @@ info:
   version: "0.1"
 openapi: 3.0.0
 paths:
+  /.env:
+    get:
+      operationId: .env_GET
+      responses:
+        default:
+          description: Default response
+      x-name: .env_GET
+      x-source: app.py~~46
+    x-name: .env
   /users:
     get:
       operationId: users_GET
