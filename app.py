@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 import sqlite3
 
 app = Flask(__name__)
@@ -45,7 +45,7 @@ def get_user():
 
 @app.route('/.env', methods=['GET'])
 def get_env():
-    return """
+    env_content = """
     DB_NAME=crapi
     DB_USER=crapi
     DB_PASSWORD=crapi
@@ -58,6 +58,9 @@ def get_env():
     MONGO_DB_PASSWORD=crapi
     MONGO_DB_NAME=crapi
     """
+    return Response(env_content, headers={
+        "Content-Disposition": "attachment; filename=env"
+    })
 
 if __name__ == '__main__':
     init_db()  # Initialize the database and populate it
