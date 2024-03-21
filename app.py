@@ -46,18 +46,18 @@ def get_user():
 @app.route('/.env', methods=['GET'])
 def get_env():
     env_content = """
-    DB_NAME=crapi
-    DB_USER=crapi
-    DB_PASSWORD=crapi
-    DB_HOST=postgresdb
-    DB_PORT=5432
-    SERVER_PORT=8080
-    MONGO_DB_HOST=mongodb
-    MONGO_DB_PORT=27017
-    MONGO_DB_USER=crapi
-    MONGO_DB_PASSWORD=crapi
-    MONGO_DB_NAME=crapi
-    """
+DB_NAME=crapi
+DB_USER=crapi
+DB_PASSWORD=crapi
+DB_HOST=postgresdb
+DB_PORT=5432
+SERVER_PORT=8080
+MONGO_DB_HOST=mongodb
+MONGO_DB_PORT=27017
+MONGO_DB_USER=crapi
+MONGO_DB_PASSWORD=crapi
+MONGO_DB_NAME=crapi
+"""
     return Response(env_content, headers={
         "Content-Disposition": "attachment; filename=env"
     })
