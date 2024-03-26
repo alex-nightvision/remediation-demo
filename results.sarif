@@ -1,0 +1,518 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "NightVision",
+          "version": "0.1.0",
+          "informationUri": "https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings",
+          "rules": [
+            {
+              "id": "ed1db259-3746-421e-8bf6-35773a2eddac-Missing HTTP Header - Access-Control-Allow-Origin",
+              "name": "ed1db259-3746-421e-8bf6-35773a2eddac-Missing HTTP Header - Access-Control-Allow-Origin",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Access-Control-Allow-Origin"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: This site is missing the `Access-Control-Allow-Origin` HTTP security header. The `Access-Control-Allow-Origin` response header indicates whether the response can be shared with requesting code from the given origin. By not including this header, an attacker could bypass the browser's cross-domain policy and perform malicious actions, such as stealing cookies, performing phishing attacks, or other malicious activities.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Access-Control-Allow-Origin` header in the response, then it does not have this layer of protection provided by the HTTP header. \n\nThe impact of this misconfiguration is that it can allow an attacker to bypass the same-origin policy and access sensitive information from other websites. This can lead to data theft, cross-site request forgery, and other malicious activities.\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#access-control-allow-origin\n- https://developer.mozilla.org/en-us/docs/web/http/headers/access-control-allow-origin\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/183"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: This site is missing the `Access-Control-Allow-Origin` HTTP security header. The `Access-Control-Allow-Origin` response header indicates whether the response can be shared with requesting code from the given origin. By not including this header, an attacker could bypass the browser's cross-domain policy and perform malicious actions, such as stealing cookies, performing phishing attacks, or other malicious activities.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Access-Control-Allow-Origin` header in the response, then it does not have this layer of protection provided by the HTTP header. \n\nThe impact of this misconfiguration is that it can allow an attacker to bypass the same-origin policy and access sensitive information from other websites. This can lead to data theft, cross-site request forgery, and other malicious activities.\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#access-control-allow-origin\n- https://developer.mozilla.org/en-us/docs/web/http/headers/access-control-allow-origin\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/183"
+              }
+            },
+            {
+              "id": "ea3ed0ee-a311-4ea3-8bc2-2d1c7186725b-Missing HTTP Header - Strict-Transport-Security",
+              "name": "ea3ed0ee-a311-4ea3-8bc2-2d1c7186725b-Missing HTTP Header - Strict-Transport-Security",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Strict-Transport-Security"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `Strict-Transport-Security` header. When this header is not present, an attacker could intercept the user's session under certain conditions covered below ([source](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html#threats)).\n\n* Case: User bookmarks or manually types http://example.com and is subject to a man-in-the-middle attacker\n    * Protection: HSTS automatically redirects HTTP requests to HTTPS for the target domain\n* Case: Web application that is intended to be purely HTTPS inadvertently contains HTTP links or serves content over HTTP\n    * Protection: HSTS automatically redirects HTTP requests to HTTPS for the target domain\n* Case: A man-in-the-middle attacker attempts to intercept traffic from a victim user using an invalid certificate and hopes the user will accept the bad certificate\n    * Protection: HSTS does not allow a user to override the invalid certificate message\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Strict-Transport-Security` header in the response, then it does not have this layer of protection provided by the HTTP header. \n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security-hsts\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/190"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `Strict-Transport-Security` header. When this header is not present, an attacker could intercept the user's session under certain conditions covered below ([source](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html#threats)).\n\n* Case: User bookmarks or manually types http://example.com and is subject to a man-in-the-middle attacker\n    * Protection: HSTS automatically redirects HTTP requests to HTTPS for the target domain\n* Case: Web application that is intended to be purely HTTPS inadvertently contains HTTP links or serves content over HTTP\n    * Protection: HSTS automatically redirects HTTP requests to HTTPS for the target domain\n* Case: A man-in-the-middle attacker attempts to intercept traffic from a victim user using an invalid certificate and hopes the user will accept the bad certificate\n    * Protection: HSTS does not allow a user to override the invalid certificate message\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Strict-Transport-Security` header in the response, then it does not have this layer of protection provided by the HTTP header. \n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security-hsts\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/190"
+              }
+            },
+            {
+              "id": "42fbe49e-4200-4764-a7c8-aae02d1a99d8-Missing HTTP Header - Permissions-Policy",
+              "name": "42fbe49e-4200-4764-a7c8-aae02d1a99d8-Missing HTTP Header - Permissions-Policy",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Permissions-Policy"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `Permissions-Policy` HTTP security header. The `Permissions-Policy` header is an additional layer of security control that can ensure that even if a site is vulnerable to XSS, the site can be configured to never allow the camera, microphone, or other browser features to be activated by JavaScript, thus limiting the impact of a potential XSS vulnerability.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Permissions-Policy` header, then it does not have this layer of protection provided by the HTTP header. \n\nConsider setting the Permissions policy to disable geolocation, camera, and microphone for all domains, unless the site requires these features. This will help protect the site from XSS vulnerabilities that could be used to access sensitive information. For example: `Permissions-Policy: geolocation=(), camera=(), microphone=()`.\n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#permissions-policy-formerly-feature-policy \n- https://developer.mozilla.org/en-us/docs/web/http/headers/permissions-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/188"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `Permissions-Policy` HTTP security header. The `Permissions-Policy` header is an additional layer of security control that can ensure that even if a site is vulnerable to XSS, the site can be configured to never allow the camera, microphone, or other browser features to be activated by JavaScript, thus limiting the impact of a potential XSS vulnerability.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Permissions-Policy` header, then it does not have this layer of protection provided by the HTTP header. \n\nConsider setting the Permissions policy to disable geolocation, camera, and microphone for all domains, unless the site requires these features. This will help protect the site from XSS vulnerabilities that could be used to access sensitive information. For example: `Permissions-Policy: geolocation=(), camera=(), microphone=()`.\n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#permissions-policy-formerly-feature-policy \n- https://developer.mozilla.org/en-us/docs/web/http/headers/permissions-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/188"
+              }
+            },
+            {
+              "id": "60ab8ca9-a116-4ea8-9ed5-e4fa6807b97d-Missing HTTP Header - Referrer-Policy",
+              "name": "60ab8ca9-a116-4ea8-9ed5-e4fa6807b97d-Missing HTTP Header - Referrer-Policy",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Referrer-Policy"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `Referrer-Policy` HTTP security header. This HTTP header controls how much referrer information (sent via the `Referer` header) should be included with requests. If this is not included, and the user is leveraging an older browser, then the `Referer` information can can contain the absolute or partial URL from which the resource was requested, potentially leading to information leakages offsite via the URLs in the `Referer` header.\n\n**Note**: Today, the default behavior in modern browsers is to no longer send all referrer information (origin, path, and query string) to the same site but to only send the origin to other sites. Therefore, the `Referrer-Policy` header is not as important as it used to be. Implementing this control could protect certain information leakage scenarios, but in most cases is not a critical security control.\n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy \n- https://developer.mozilla.org/en-us/docs/web/http/headers/referrer-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/189"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `Referrer-Policy` HTTP security header. This HTTP header controls how much referrer information (sent via the `Referer` header) should be included with requests. If this is not included, and the user is leveraging an older browser, then the `Referer` information can can contain the absolute or partial URL from which the resource was requested, potentially leading to information leakages offsite via the URLs in the `Referer` header.\n\n**Note**: Today, the default behavior in modern browsers is to no longer send all referrer information (origin, path, and query string) to the same site but to only send the origin to other sites. Therefore, the `Referrer-Policy` header is not as important as it used to be. Implementing this control could protect certain information leakage scenarios, but in most cases is not a critical security control.\n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy \n- https://developer.mozilla.org/en-us/docs/web/http/headers/referrer-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/189"
+              }
+            },
+            {
+              "id": "2645b199-52bb-4983-bd69-94bdbeb8d5dd-Missing HTTP Header - Content-Security-Policy",
+              "name": "2645b199-52bb-4983-bd69-94bdbeb8d5dd-Missing HTTP Header - Content-Security-Policy",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Content-Security-Policy"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The application does not include the `Content-Security-Policy` HTTP security header in the response. The lack of this header *could* allow an attacker to inject arbitrary JavaScript into the page because browsers allow the loading of any resource, including scripts and stylesheets, when the `Content-Security-Policy` header is missing. \n\nTo demonstrate this security issue, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. The response does not include the `Content-Security-Policy` header.\n \n If an attacker can control a script that is executed in the victim's browser, then the attacker could use this access to steal cookies, perform phishing attacks, or perform other malicious actions. This could have a serious impact on the security of the application and its users.\n  \n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#content-security-policy-csp \n- https://developer.mozilla.org/en-us/docs/web/http/headers/content-security-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/184"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The application does not include the `Content-Security-Policy` HTTP security header in the response. The lack of this header *could* allow an attacker to inject arbitrary JavaScript into the page because browsers allow the loading of any resource, including scripts and stylesheets, when the `Content-Security-Policy` header is missing. \n\nTo demonstrate this security issue, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. The response does not include the `Content-Security-Policy` header.\n \n If an attacker can control a script that is executed in the victim's browser, then the attacker could use this access to steal cookies, perform phishing attacks, or perform other malicious actions. This could have a serious impact on the security of the application and its users.\n  \n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#content-security-policy-csp \n- https://developer.mozilla.org/en-us/docs/web/http/headers/content-security-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/184"
+              }
+            },
+            {
+              "id": "249fd7de-6f86-49d3-a511-99fba25b5114-Laravel - Sensitive Information Disclosure",
+              "name": "249fd7de-6f86-49d3-a511-99fba25b5114-Laravel - Sensitive Information Disclosure",
+              "shortDescription": {
+                "text": "Laravel - Sensitive Information Disclosure"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\nℹ️ The `/.env` URL path is vulnerable to **Laravel - Sensitive Information Disclosure** via a `GET` request. The application declared the `/.env` endpoint in the file `app.py` on **Line 46**.\n\n**Description**: This vulnerability, known as \"Laravel - Sensitive Information Disclosure,\" was discovered using the Nuclei tool. The Nuclei template for this vulnerability is designed to check if sensitive information, such as database credentials and tokens, are publicly accessible in a Laravel .env file. In this case, the vulnerability was triggered by accessing the URL path \"/.env\" using the HTTP method `GET`.\n\nThe impact of this vulnerability is significant as it allows unauthorized individuals to access sensitive information stored in the Laravel .env file. The proof-of-concept attack involved accessing the \".env\" file directly, which should not be publicly accessible. By exploiting this vulnerability, an attacker could gain access to database credentials and tokens, potentially leading to unauthorized access, data breaches, and further compromise of the application or system. It is crucial to secure the .env file and restrict public access to prevent such sensitive information disclosure.\n\n**References**:\n- https://laravel.com/docs/master/configuration#environment-configuration\n- https://stackoverflow.com/questions/38331397/how-to-protect-env-file-in-laravel\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/16348"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\nℹ️ The `/.env` URL path is vulnerable to **Laravel - Sensitive Information Disclosure** via a `GET` request. The application declared the `/.env` endpoint in the file `app.py` on **Line 46**.\n\n**Description**: This vulnerability, known as \"Laravel - Sensitive Information Disclosure,\" was discovered using the Nuclei tool. The Nuclei template for this vulnerability is designed to check if sensitive information, such as database credentials and tokens, are publicly accessible in a Laravel .env file. In this case, the vulnerability was triggered by accessing the URL path \"/.env\" using the HTTP method `GET`.\n\nThe impact of this vulnerability is significant as it allows unauthorized individuals to access sensitive information stored in the Laravel .env file. The proof-of-concept attack involved accessing the \".env\" file directly, which should not be publicly accessible. By exploiting this vulnerability, an attacker could gain access to database credentials and tokens, potentially leading to unauthorized access, data breaches, and further compromise of the application or system. It is crucial to secure the .env file and restrict public access to prevent such sensitive information disclosure.\n\n**References**:\n- https://laravel.com/docs/master/configuration#environment-configuration\n- https://stackoverflow.com/questions/38331397/how-to-protect-env-file-in-laravel\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/16348"
+              }
+            },
+            {
+              "id": "be76d1c8-ada1-4c1f-bfd7-6ee288390269-Missing HTTP Header - X-Content-Type-Options",
+              "name": "be76d1c8-ada1-4c1f-bfd7-6ee288390269-Missing HTTP Header - X-Content-Type-Options",
+              "shortDescription": {
+                "text": "Missing HTTP Header - X-Content-Type-Options"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `X-Content-Type-Options` HTTP security header. This header is used to block browsers' [MIME type sniffing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), which can transform non-executable MIME types into executable MIME types ([MIME Confusion Attacks](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)).\n\nSet the Content-Type header to the following throughout the site: `X-Content-Type-Options: nosniff`\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-content-type-options\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/191"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The site is missing the `X-Content-Type-Options` HTTP security header. This header is used to block browsers' [MIME type sniffing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), which can transform non-executable MIME types into executable MIME types ([MIME Confusion Attacks](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)).\n\nSet the Content-Type header to the following throughout the site: `X-Content-Type-Options: nosniff`\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-content-type-options\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/191"
+              }
+            },
+            {
+              "id": "8fa95b8e-84ca-4341-8687-a729c3846759-Missing HTTP Header - X-Frame-Options",
+              "name": "8fa95b8e-84ca-4341-8687-a729c3846759-Missing HTTP Header - X-Frame-Options",
+              "shortDescription": {
+                "text": "Missing HTTP Header - X-Frame-Options"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The application does not include the `X-Frame-Options` HTTP header in the response. If the application leverages iframes but does not set this header, the lack of this header *could* allow an attacker to perform clickjacking attacks, which can be used to trick users into performing actions that they did not intend to perform, leading to keystroke logging, phishing, password leaks, and other malicious activities.\n \nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. The response does not include the `X-Frame-Options` header.\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-frame-options\n- https://developer.mozilla.org/en-us/docs/web/http/headers/x-frame-options\n- https://owasp.org/www-community/attacks/Clickjacking\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/192"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The application does not include the `X-Frame-Options` HTTP header in the response. If the application leverages iframes but does not set this header, the lack of this header *could* allow an attacker to perform clickjacking attacks, which can be used to trick users into performing actions that they did not intend to perform, leading to keystroke logging, phishing, password leaks, and other malicious activities.\n \nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. The response does not include the `X-Frame-Options` header.\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-frame-options\n- https://developer.mozilla.org/en-us/docs/web/http/headers/x-frame-options\n- https://owasp.org/www-community/attacks/Clickjacking\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/192"
+              }
+            },
+            {
+              "id": "03f086c5-acf6-4c4e-9bcf-92a0ecca3078-Missing HTTP Header - Cross-Origin-Opener-Policy",
+              "name": "03f086c5-acf6-4c4e-9bcf-92a0ecca3078-Missing HTTP Header - Cross-Origin-Opener-Policy",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Cross-Origin-Opener-Policy"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The `Cross-Origin-Opener-Policy` HTTP header is missing from the site's HTTP response. The `Cross-Origin-Opener-Policy` header is used to ensure that the browser's cross-domain policy is enforced.\n\nCOOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed XS-Leaks, which includes Spectre, Meltdown, and Rowhammer.\n\nConsider setting the `Cross-Origin-Opener-Policy` header to `same-origin` to prevent cross-domain attacks.\n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy-coop \n- https://developer.mozilla.org/en-us/docs/web/http/headers/cross-origin-opener-policy\n- https://xsleaks.dev/\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/186"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: The `Cross-Origin-Opener-Policy` HTTP header is missing from the site's HTTP response. The `Cross-Origin-Opener-Policy` header is used to ensure that the browser's cross-domain policy is enforced.\n\nCOOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed XS-Leaks, which includes Spectre, Meltdown, and Rowhammer.\n\nConsider setting the `Cross-Origin-Opener-Policy` header to `same-origin` to prevent cross-domain attacks.\n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy-coop \n- https://developer.mozilla.org/en-us/docs/web/http/headers/cross-origin-opener-policy\n- https://xsleaks.dev/\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/186"
+              }
+            },
+            {
+              "id": "5a5a4aaf-f32e-48ea-b4c9-6ba9023ed2d0-Missing HTTP Header - Cross-Origin-Resource-Policy",
+              "name": "5a5a4aaf-f32e-48ea-b4c9-6ba9023ed2d0-Missing HTTP Header - Cross-Origin-Resource-Policy",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Cross-Origin-Resource-Policy"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: This site is missing the `Cross-Origin-Resource-Policy` HTTP security header. The `Cross-Origin-Resource-Policy` (CORP) header allows you to control the set of origins that are empowered to include a resource. It is a robust defense against attacks like Spectre, as it allows browsers to block a given response before it enters an attacker's process.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Cross-Origin-Resource-Policy` header, then it does not have this layer of protection provided by the HTTP header. \n\nConsider setting the `Cross-Origin-Resource-Policy` header to `same-site` to prevent cross-domain attacks.\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy-corp \n- https://developer.mozilla.org/en-us/docs/web/http/headers/cross-origin-resource-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/187"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: This site is missing the `Cross-Origin-Resource-Policy` HTTP security header. The `Cross-Origin-Resource-Policy` (CORP) header allows you to control the set of origins that are empowered to include a resource. It is a robust defense against attacks like Spectre, as it allows browsers to block a given response before it enters an attacker's process.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Cross-Origin-Resource-Policy` header, then it does not have this layer of protection provided by the HTTP header. \n\nConsider setting the `Cross-Origin-Resource-Policy` header to `same-site` to prevent cross-domain attacks.\n\n**References**:\n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy-corp \n- https://developer.mozilla.org/en-us/docs/web/http/headers/cross-origin-resource-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/187"
+              }
+            },
+            {
+              "id": "022c13f4-eb6b-481d-b944-757ac79a25c2-Missing HTTP Header - Cross-Origin-Embedder-Policy",
+              "name": "022c13f4-eb6b-481d-b944-757ac79a25c2-Missing HTTP Header - Cross-Origin-Embedder-Policy",
+              "shortDescription": {
+                "text": "Missing HTTP Header - Cross-Origin-Embedder-Policy"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: This site is missing the `Cross-Origin-Embedder-Policy` HTTP Security header. The Cross-Origin-Embedder-Policy (COEP) header is used to specify a policy for which cross-origin resources are allowed to be embedded within a document. The lack of this header **could** allow an attacker to bypass the browser's cross-domain policy and gain access to sensitive information.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Cross-Origin-Embedder-Policy` header in the response, then it does not have this layer of protection provided by the HTTP header. \n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy-coep \n- https://developer.mozilla.org/en-us/docs/web/http/headers/cross-origin-embedder-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/185"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\n**Description**: This site is missing the `Cross-Origin-Embedder-Policy` HTTP Security header. The Cross-Origin-Embedder-Policy (COEP) header is used to specify a policy for which cross-origin resources are allowed to be embedded within a document. The lack of this header **could** allow an attacker to bypass the browser's cross-domain policy and gain access to sensitive information.\n\nTo demonstrate this security misconfiguration, send an HTTP request to `None` with the following `curl` command: ```curl -I None```. If the HTTP response does not include the `Cross-Origin-Embedder-Policy` header in the response, then it does not have this layer of protection provided by the HTTP header. \n\n**References**: \n- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy-coep \n- https://developer.mozilla.org/en-us/docs/web/http/headers/cross-origin-embedder-policy\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/185"
+              }
+            },
+            {
+              "id": "39354d40-10bb-478c-afc0-40011d5b0170-Codeigniter - .env File Discovery",
+              "name": "39354d40-10bb-478c-afc0-40011d5b0170-Codeigniter - .env File Discovery",
+              "shortDescription": {
+                "text": "Codeigniter - .env File Discovery"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\nℹ️ The `/.env` URL path is vulnerable to **Codeigniter - .env File Discovery** via a `GET` request. The application declared the `/.env` endpoint in the file `app.py` on **Line 46**.\n\n**Description**: The Nuclei template used in this case is called \"Codeigniter - .env File Discovery\". This template is specifically designed to discover Codeigniter .env files by sending GET requests to specific paths and checking for a status code of 200. The vulnerability was triggered by a GET request to the URL path \"/.env\" on the target application.\n\nThe impact of this vulnerability is significant as it allows an attacker to access sensitive configuration files, such as the .env file, which often contain sensitive information such as database credentials, API keys, and other secrets. By exploiting this vulnerability, an attacker can gain unauthorized access to these sensitive details, potentially leading to further compromise of the application or system.\n\nTo exploit this vulnerability, the attacker would send a GET request to the \"/.env\" path. The payload itself is empty in this case, as the vulnerability is triggered by the specific URL path. The HTTP method used is `GET`. Upon receiving the request, if the application responds with a status code of 200, it indicates that the .env file was discovered, confirming the presence of sensitive information.\n\nIn summary, this vulnerability allows an attacker to access sensitive configuration files by exploiting the Codeigniter framework's insecure handling of .env files. The impact of this vulnerability is the potential exposure of sensitive information, which can lead to further compromise of the application or system. It is crucial for developers to address this vulnerability by properly securing and protecting the .env files and ensuring that they are not accessible to unauthorized users.\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/12692"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\nℹ️ The `/.env` URL path is vulnerable to **Codeigniter - .env File Discovery** via a `GET` request. The application declared the `/.env` endpoint in the file `app.py` on **Line 46**.\n\n**Description**: The Nuclei template used in this case is called \"Codeigniter - .env File Discovery\". This template is specifically designed to discover Codeigniter .env files by sending GET requests to specific paths and checking for a status code of 200. The vulnerability was triggered by a GET request to the URL path \"/.env\" on the target application.\n\nThe impact of this vulnerability is significant as it allows an attacker to access sensitive configuration files, such as the .env file, which often contain sensitive information such as database credentials, API keys, and other secrets. By exploiting this vulnerability, an attacker can gain unauthorized access to these sensitive details, potentially leading to further compromise of the application or system.\n\nTo exploit this vulnerability, the attacker would send a GET request to the \"/.env\" path. The payload itself is empty in this case, as the vulnerability is triggered by the specific URL path. The HTTP method used is `GET`. Upon receiving the request, if the application responds with a status code of 200, it indicates that the .env file was discovered, confirming the presence of sensitive information.\n\nIn summary, this vulnerability allows an attacker to access sensitive configuration files by exploiting the Codeigniter framework's insecure handling of .env files. The impact of this vulnerability is the potential exposure of sensitive information, which can lead to further compromise of the application or system. It is crucial for developers to address this vulnerability by properly securing and protecting the .env files and ensuring that they are not accessible to unauthorized users.\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/12692"
+              }
+            },
+            {
+              "id": "15a3da1c-3d5c-4288-a751-99080f2667a4-SQL Injection - SQLite",
+              "name": "15a3da1c-3d5c-4288-a751-99080f2667a4-SQL Injection - SQLite",
+              "shortDescription": {
+                "text": "SQL Injection - SQLite"
+              },
+              "fullDescription": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\nℹ️ The `/users` URL path is vulnerable to **SQL Injection - SQLite** via a `GET` request. The application declared the `/users` endpoint in the file `app.py` on **Line 25**.\n\n**Description**: The vulnerability in question is a SQL Injection vulnerability of the SQLite database type. The payload used to exploit this vulnerability is the string `('`. The HTTP request method used was a `GET` request, targeting the `/users` URL path on the application's `127.0.0.1:5123` location.\n\nIn this case, the evidence of the vulnerability is the error message returned by the application, indicating a syntax error near `(`. By manipulating the `name` parameter with the payload `('`, an attacker can cause the application to generate a database error message, confirming the presence of the SQL Injection vulnerability.\n\nThe impact of this vulnerability is significant as it allows an attacker to manipulate the application's database queries. With the ability to inject arbitrary SQL code, an attacker could potentially extract sensitive information, modify or delete data, or even execute unauthorized commands within the database. It is crucial to address this vulnerability promptly to prevent any potential data breaches or unauthorized access to the application's database.\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/120"
+              },
+              "helpUri": "https://docs.nightvision.net",
+              "help": {
+                "text": "🚨 **Exploitable Vulnerability Found** 🚨\n\nℹ️ The `/users` URL path is vulnerable to **SQL Injection - SQLite** via a `GET` request. The application declared the `/users` endpoint in the file `app.py` on **Line 25**.\n\n**Description**: The vulnerability in question is a SQL Injection vulnerability of the SQLite database type. The payload used to exploit this vulnerability is the string `('`. The HTTP request method used was a `GET` request, targeting the `/users` URL path on the application's `127.0.0.1:5123` location.\n\nIn this case, the evidence of the vulnerability is the error message returned by the application, indicating a syntax error near `(`. By manipulating the `name` parameter with the payload `('`, an attacker can cause the application to generate a database error message, confirming the presence of the SQL Injection vulnerability.\n\nThe impact of this vulnerability is significant as it allows an attacker to manipulate the application's database queries. With the ability to inject arbitrary SQL code, an attacker could potentially extract sensitive information, modify or delete data, or even execute unauthorized commands within the database. It is crucial to address this vulnerability promptly to prevent any potential data breaches or unauthorized access to the application's database.\n\n🔍 For more information see the issue on **NightVision** here: https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings/120"
+              }
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "https://app.nightvision.net/scans/48baf28f-c623-4459-8987-c6b43599176b/findings"
+          },
+          "length": -1
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "ed1db259-3746-421e-8bf6-35773a2eddac-Missing HTTP Header - Access-Control-Allow-Origin",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Access-Control-Allow-Origin"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "ed1db259-3746-421e-8bf6-35773a2eddac"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "ea3ed0ee-a311-4ea3-8bc2-2d1c7186725b-Missing HTTP Header - Strict-Transport-Security",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Strict-Transport-Security"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "ea3ed0ee-a311-4ea3-8bc2-2d1c7186725b"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "42fbe49e-4200-4764-a7c8-aae02d1a99d8-Missing HTTP Header - Permissions-Policy",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Permissions-Policy"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "42fbe49e-4200-4764-a7c8-aae02d1a99d8"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "60ab8ca9-a116-4ea8-9ed5-e4fa6807b97d-Missing HTTP Header - Referrer-Policy",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Referrer-Policy"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "60ab8ca9-a116-4ea8-9ed5-e4fa6807b97d"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "2645b199-52bb-4983-bd69-94bdbeb8d5dd-Missing HTTP Header - Content-Security-Policy",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Content-Security-Policy"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "2645b199-52bb-4983-bd69-94bdbeb8d5dd"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "249fd7de-6f86-49d3-a511-99fba25b5114-Laravel - Sensitive Information Disclosure",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Laravel - Sensitive Information Disclosure"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app.py"
+                },
+                "region": {
+                  "startLine": 46,
+                  "message": {
+                    "text": "Found on endpoint /.env"
+                  }
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "249fd7de-6f86-49d3-a511-99fba25b5114"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "HIGH",
+            "security-severity": "8.0"
+          }
+        },
+        {
+          "ruleId": "be76d1c8-ada1-4c1f-bfd7-6ee288390269-Missing HTTP Header - X-Content-Type-Options",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - X-Content-Type-Options"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "be76d1c8-ada1-4c1f-bfd7-6ee288390269"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "8fa95b8e-84ca-4341-8687-a729c3846759-Missing HTTP Header - X-Frame-Options",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - X-Frame-Options"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "8fa95b8e-84ca-4341-8687-a729c3846759"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "03f086c5-acf6-4c4e-9bcf-92a0ecca3078-Missing HTTP Header - Cross-Origin-Opener-Policy",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Cross-Origin-Opener-Policy"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "03f086c5-acf6-4c4e-9bcf-92a0ecca3078"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "5a5a4aaf-f32e-48ea-b4c9-6ba9023ed2d0-Missing HTTP Header - Cross-Origin-Resource-Policy",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Cross-Origin-Resource-Policy"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "5a5a4aaf-f32e-48ea-b4c9-6ba9023ed2d0"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "022c13f4-eb6b-481d-b944-757ac79a25c2-Missing HTTP Header - Cross-Origin-Embedder-Policy",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Missing HTTP Header - Cross-Origin-Embedder-Policy"
+          },
+          "locations": [
+            null
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "022c13f4-eb6b-481d-b944-757ac79a25c2"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "LOW",
+            "security-severity": "3.0"
+          }
+        },
+        {
+          "ruleId": "39354d40-10bb-478c-afc0-40011d5b0170-Codeigniter - .env File Discovery",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Codeigniter - .env File Discovery"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app.py"
+                },
+                "region": {
+                  "startLine": 46,
+                  "message": {
+                    "text": "Found on endpoint /.env"
+                  }
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "39354d40-10bb-478c-afc0-40011d5b0170"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "High",
+            "nightvision-risk": "HIGH",
+            "security-severity": "8.0"
+          }
+        },
+        {
+          "ruleId": "15a3da1c-3d5c-4288-a751-99080f2667a4-SQL Injection - SQLite",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "SQL Injection - SQLite"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app.py"
+                },
+                "region": {
+                  "startLine": 25,
+                  "message": {
+                    "text": "Found on endpoint /users"
+                  }
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "nightvisionIssueID/v1": "15a3da1c-3d5c-4288-a751-99080f2667a4"
+          },
+          "baselineState": "new",
+          "rank": 100,
+          "properties": {
+            "nightvision-confidence": "Medium",
+            "nightvision-risk": "HIGH",
+            "security-severity": "8.0"
+          }
+        }
+      ]
+    }
+  ]
+}
