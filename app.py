@@ -28,7 +28,7 @@ def get_user():
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    # Vulnerable SQL Query
+    # Vulnerable SQL Query from raw string concatenation
     query = f"SELECT * FROM users WHERE name = '{name}'"
     cursor.execute(query)
 
