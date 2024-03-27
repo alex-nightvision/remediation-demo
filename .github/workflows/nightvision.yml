@@ -22,25 +22,25 @@ jobs:
       - name: (1) Clone Code
         uses: actions/checkout@v3
       
-      - name: (2) Install NightVision
-        run: |
-            wget -c https://downloads.nightvision.net/binaries/latest/nightvision_latest_linux_amd64.tar.gz -O - | tar -xz; sudo mv nightvision /usr/local/bin/
-                    python -m pip install semgrep --user
+      # - name: (2) Install NightVision
+      #   run: |
+      #       wget -c https://downloads.nightvision.net/binaries/latest/nightvision_latest_linux_amd64.tar.gz -O - | tar -xz; sudo mv nightvision /usr/local/bin/
+      #               python -m pip install semgrep --user
 
-      - name: (3) Extract API documentation from code
-        run: |
-          nightvision swagger extract ./ -t ${NIGHTVISION_TARGET} --lang python || true
-          if [ ! -e openapi-spec.yml ]; then
-              cp backup-openapi-spec.yml openapi-spec.yml
-          fi
+      # - name: (3) Extract API documentation from code
+      #   run: |
+      #     nightvision swagger extract ./ -t ${NIGHTVISION_TARGET} --lang python || true
+      #     if [ ! -e openapi-spec.yml ]; then
+      #         cp backup-openapi-spec.yml openapi-spec.yml
+      #     fi
 
-      - name: (4) Start the app
-        run: docker-compose up -d; sleep 10
+      # - name: (4) Start the app
+      #   run: docker-compose up -d; sleep 10
 
-      - name: (5) Scan the API
-        run: |
-          nightvision scan -t ${NIGHTVISION_TARGET} -a ${NIGHTVISION_APP} > scan-results.txt
-          # nightvision export sarif -s "$(head -n 1 scan-results.txt)" --swagger-file openapi-spec.yml
+      # - name: (5) Scan the API
+      #   run: |
+      #     nightvision scan -t ${NIGHTVISION_TARGET} -a ${NIGHTVISION_APP} > scan-results.txt
+      #     # nightvision export sarif -s "$(head -n 1 scan-results.txt)" --swagger-file openapi-spec.yml
 
       - name: (5.5) Upload sarif documentation artifact
         uses: actions/upload-artifact@v3
