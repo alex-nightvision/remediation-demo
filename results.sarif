@@ -211,7 +211,18 @@
             "text": "Missing HTTP Header - Access-Control-Allow-Origin"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "ed1db259-3746-421e-8bf6-35773a2eddac"
@@ -232,7 +243,18 @@
             "text": "Missing HTTP Header - Strict-Transport-Security"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "ea3ed0ee-a311-4ea3-8bc2-2d1c7186725b"
@@ -253,7 +275,18 @@
             "text": "Missing HTTP Header - Permissions-Policy"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "42fbe49e-4200-4764-a7c8-aae02d1a99d8"
@@ -274,7 +307,18 @@
             "text": "Missing HTTP Header - Referrer-Policy"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "60ab8ca9-a116-4ea8-9ed5-e4fa6807b97d"
@@ -295,7 +339,18 @@
             "text": "Missing HTTP Header - Content-Security-Policy"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "2645b199-52bb-4983-bd69-94bdbeb8d5dd"
@@ -349,7 +404,18 @@
             "text": "Missing HTTP Header - X-Content-Type-Options"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "be76d1c8-ada1-4c1f-bfd7-6ee288390269"
@@ -370,7 +436,18 @@
             "text": "Missing HTTP Header - X-Frame-Options"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "8fa95b8e-84ca-4341-8687-a729c3846759"
@@ -391,7 +468,18 @@
             "text": "Missing HTTP Header - Cross-Origin-Opener-Policy"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "03f086c5-acf6-4c4e-9bcf-92a0ecca3078"
@@ -412,7 +500,18 @@
             "text": "Missing HTTP Header - Cross-Origin-Resource-Policy"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "5a5a4aaf-f32e-48ea-b4c9-6ba9023ed2d0"
@@ -433,7 +532,18 @@
             "text": "Missing HTTP Header - Cross-Origin-Embedder-Policy"
           },
           "locations": [
-            null
+            {
+               "physicalLocation": {
+                 "artifactLocation": {
+                   "uri": "/"
+                 },
+                 "region": {
+                   "message": {
+                     "text": "Found on endpoint /"
+                   }
+                 }
+               }
+             }
           ],
           "partialFingerprints": {
             "nightvisionIssueID/v1": "022c13f4-eb6b-481d-b944-757ac79a25c2"
