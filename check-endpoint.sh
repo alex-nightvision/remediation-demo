@@ -10,6 +10,6 @@ echo 'curl http://127.0.0.1:5000/.env'
 echo
 curl http://127.0.0.1:5000/.env
 
-sleep 3
+read
 open -a Google\ Chrome "http://127.0.0.1:5000/.env" &
 open -a Google\ Chrome "http://127.0.0.1:5000/users?name='%20OR%20'1'='1" &
