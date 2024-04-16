@@ -68,7 +68,7 @@ origins = [
     "http://127.0.0.1:5000",
     "http://localhost:5000",
 ]
-CORS(app, resources={r"/*": {"origins": origins}})
+# CORS(app, resources={r"/*": {"origins": origins}})
 
 @app.after_request
 def add_security_headers(response):
