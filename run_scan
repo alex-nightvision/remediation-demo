@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "nightvision scan -t remediation-demo -a remediation-demo"
+nightvision scan -t remediation-demo -a remediation-demo
